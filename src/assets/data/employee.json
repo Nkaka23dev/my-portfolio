@@ -1,0 +1,25 @@
+ [
+  {"img":"/assets/images/space1.jpg",
+   "desc":"Hey there! my name is ERICK NKAKA ",
+   "like":1,
+    "id":2727,
+    "course":"Angular"},
+
+   {"img":"/assets/images/space2.jpg",
+   "desc":"This is the second picture,",
+   "like":2,
+    "id":7353673,
+    "course":"React"},
+
+   {"img":"/assets/images/hhh.jpg",
+   "desc":"My old picture coming from database",
+   "like":3,
+   "id":8766,
+    "course":"Vue"},
+
+   {"img":"/assets/images/stone.jpg",
+   "desc":"beautiful stones.",
+   "like":4,
+    "id":8376,
+    "course":"Mathematics"}
+  ]

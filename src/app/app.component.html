@@ -1,0 +1,238 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- Header Area wrapper Starts -->
+<header id="header-wrap">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+<div class="container">
+    <div class="navbar-header">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+     aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <span class="icon-menu"></span>
+    <span class="icon-menu"></span>
+    <span class="icon-menu"></span>
+    </button>
+    <h3 class="navbar-brand nkaka-logo">Nkaka</h3>
+    </div>
+    <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+          <li class="nav-item active">
+            <a class="nav-link" href="#hero-area">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">
+              Resume
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+     <!-- Mobile Menu Start -->
+     <ul class="onepage-nev mobile-menu">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">about</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#resume">resume</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <!-- Mobile Menu End -->
+</nav>
+<!-- Navbar End -->
+
+  <!-- Hero Area Start -->
+  <div id="hero-area" class="hero-area-bg">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 text-center">
+          <div class="contents">
+              
+            <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s" id="nka">I'm</h5>
+            <h5 class="head-title wow fadeInUp" data-wow-delay="0.4s">Eric Nkaka</h5>
+            <p class="script-font wow fadeInUp" data-wow-delay="0.6s" style="margin-top:10px;"> 
+              A Software Engineer</p>
+            <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+              <li>
+                <a class="facebook" href="#"><i
+                    class="icon-social-facebook"></i></a>
+              </li>
+              <li>
+                <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
+              </li>
+              <li>
+                <a class="instagram" href="#"><i
+                    class="icon-social-instagram"></i></a>
+              </li>
+              
+              <!-- <li>
+                <a class="linkedin" href="https://www.linkedin.com/in/frank-kwizera"><i
+                    class="icon-social-linkedin"></i></a>
+              </li> -->
+            </ul>
+            <div class="header-button wow fadeInUp" data-wow-delay="1s">
+              <a href="#contact" class="btn btn-common ">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Area End -->
+</header>
+
+<app-bio></app-bio>
+
+<app-skills></app-skills>
+
+<app-resume></app-resume>
+<!-- Contact Section Start -->
+<section id="contact" class="section-padding">
+  <div class="contact-form">
+    <div class="container">
+      <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+        <div class="col-md-6 col-lg-6 col-sm-12">
+          <div class="contact-block">
+            <h2>Contact Form</h2>
+            <form id="contactForm" [formGroup]="contactFormGroup" #formDirective="ngForm"
+              (ngSubmit)="onSubmit(contactFormGroup,formDirective)">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input formControlName="name" name="name" type="text" class="form-control" id="name"
+                      placeholder="Name" required data-error="Please enter your name">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input formControlName="email" type="text" placeholder="Email" id="email" class="form-control"
+                      name="email" required data-error="Please enter your email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input formControlName="subject" name="subject" type="text" placeholder="Subject" id="msg_subject"
+                      class="form-control" required data-error="Please enter your subject">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea formControlName="message" name="message" class="form-control" id="message"
+                      placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="submit-button">
+                    <button *ngIf="!loading" [disabled]="!contactFormGroup.valid" color="primary" class="btn btn-common"
+                      id="submit" type="submit">Send Message</button>
+                    <div class="spinner-container" *ngIf="loading">
+                      <div class="spinner">
+                        <div class="rect1"></div>
+                        <div class="rect2"></div>
+                        <div class="rect3"></div>
+                        <div class="rect4"></div>
+                        <div class="rect5"></div>
+                      </div>
+                    </div>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <p class="message">{{isEmailSent}}</p> 
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12">
+          <div class="footer-right-area wow fadeIn">
+            <h2>Contact Address</h2>
+            <div class="footer-right-contact">
+              <div class="single-contact">
+                <div class="contact-icon">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <p>Kigali, Rwanda</p>
+              </div>
+              <div class="single-contact">
+                <div class="contact-icon">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <p><a href="mailto:nkakaeric96@gmail.com">nkakaeric96@gmail.com</a></p>
+              </div>
+              <div class="single-contact">
+                <div class="contact-icon">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <p><a href="#">+ (250) 782468006/789716690</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Footer Section Start -->
+<footer class="footer-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+          <ul class="social-icon">
+            <li>
+              <a class="facebook" href="#"><i
+                  class="icon-social-facebook"></i></a>
+            </li>
+            <li>
+              <a class="twitter" href="#" target="_blank">
+                <i class="icon-social-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="instagram" href="#" target="_blank">
+                <i class="icon-social-instagram"></i>
+              </a>
+            </li>
+            <!-- <li>
+              <a class="instagram" href="#" target="_blank">
+                <i class="icon-social-linkedin"></i>
+              </a>
+            </li> -->
+          </ul>
+           <p>Copyright © {{currentYear}} Eric Nkaka</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Section End -->

@@ -1,0 +1,17 @@
+ [
+  {"img":"/assets/images/space1.jpg",
+   "description":"Hey there! my name is ERICK NKAKA , check out and like my selfie. if ypu click a delete button image will disappear ",
+   "like":0},
+
+   {"img":"/assets/images/space2.jpg",
+   "description":"This is the second picture , check out and like it.if you click a delete button image will disappear",
+   "like":0},
+
+   {"img":"/assets/images/hhh.jpg",
+   "description":"My old picture coming from database, check it  out  ,if you click a delete button image will disappear",
+   "like":0},
+
+   {"img":"/assets/images/stone.jpg",
+   "description":"beautiful stones.",
+   "like":0}
+  ]
