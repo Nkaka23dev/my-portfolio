@@ -52,7 +52,7 @@ onSubmit(form, formDirective: FormGroupDirective) {
       this.contactFormGroup.reset();
       formDirective.resetForm();
     } else {
-      this.isEmailSent = 'Unable to sent a message now, kindly try again';
+      this.isEmailSent ='Message not sent, kindly try again.';
     }
   });
 }
